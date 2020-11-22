@@ -1,0 +1,38 @@
+body{
+  background-color: #b83b5e;
+}
+
+table,th,td{
+  border: 1px solid black;
+  background-color: white;
+}
+
+.player{
+  background-color: #fff5ea;
+  padding: 3px;
+}
+
+.PlayersList{
+  margin: auto;
+  padding: 2em;
+  padding-bottom: 6em;
+}
+
+.FirstBlockPlayers{
+  float: left;
+  width: 20%;
+}
+
+.SecondBlockPlayers{
+  float: left;
+  width: 20%;
+}
+
+.ThirdBlockPlayers{
+  float: left;
+  width: 20%;
+}
+
+.PlayerAttributes{
+  padding: 2em;
+}

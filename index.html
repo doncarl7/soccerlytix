@@ -1,0 +1,317 @@
+<html>
+<head>
+  <title>Football Counter App</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scriptjs.js"></script>
+  </head>
+<body>
+<div class="PlayersList">
+  <h3>Players List</h3>
+  <div class="FirstBlockPlayers">
+    <h4>Attack</h4>
+    <button class="player" onclick="choosePlayer(0)">Kane</button>
+    <button class="player" onclick="choosePlayer(1)">Son HM</button>
+    <button class="player" onclick="choosePlayer(2)">Bale</button>
+  </div>
+  <div class="SecondBlockPlayers">
+    <h4>Midfield</h4>
+    <button class="player" onclick="choosePlayer(3)">Winks</button>
+    <button class="player" onclick="choosePlayer(4)">Ndombele</button>
+    <button class="player" onclick="choosePlayer(5)">Hojberg</button>
+  </div>
+  <div class="ThirdBlockPlayers">
+    <h4>Defence</h4>
+    <button class="player" onclick="choosePlayer(6)">Reguilon</button>
+    <button class="player" onclick="choosePlayer(7)">Doherty</button>
+    <button class="player" onclick="choosePlayer(8)">Dier</button>
+    <button class="player" onclick="choosePlayer(9)">Alderwiereld</button>
+    <button class="player" onclick="choosePlayer(10)">Lloris</button>
+  </div>
+</div>
+<div class="PlayerAttributes">
+  <h3>Attributes</h3>
+  <button class="attribute" type="button" name="TackleLost"  onclick="attributeCounter(0)">Tackle Lost</button>
+  <button class="attribute" type="button" name="TackleWon" onclick="attributeCounter(1)">Tackle Won</button>
+  <button class="attribute" type="button" name="Interception" onclick="attributeCounter(2)">Interception</button>
+  <button class="attribute" type="button" name="Blocks" onclick="attributeCounter(3)">Blocks</button>
+  <button class="attribute" type="button" name="AerialDuelWon" onclick="attributeCounter(4)">Aerial Duel Won</button>
+  <button class="attribute" type="button" name="AerialDuelLost" onclick="attributeCounter(5)">Aerial Duel Lost</button>
+  <button class="attribute" type="button" name="Save" onclick="attributeCounter(6)">Save</button>
+  <button class="attribute" type="button" name="Punch" onclick="attributeCounter(7)">Punch</button>
+  <button class="attribute" type="button" name="Pass" onclick="attributeCounter(8)">Pass</button>
+  <button class="attribute" type="button" name="PassFailed" onclick="attributeCounter(9)">Pass Failed</button>
+  <button class="attribute" type="button" name="ThroughBall" onclick="attributeCounter(10)">Through Ball</button>
+  <button class="attribute" type="button" name="ProgressivePass" onclick="attributeCounter(11)">Progressive Pass</button>
+  <button class="attribute" type="button" name="KeyPass" onclick="attributeCounter(12)">Key Pass</button>
+  <button class="attribute" type="button" name="Assist" onclick="attributeCounter(13)">Assist</button>
+  <button class="attribute" type="button" name="ShotOnTarget" onclick="attributeCounter(14)">Shot On Target</button>
+  <button class="attribute" type="button" name="ShotOffTarget" onclick="attributeCounter(15)">Shot Off Target</button>
+  <button class="attribute" type="button" name="GoalConceded" onclick="attributeCounter(16)">Goal Conceded</button>
+  <button class="attribute" type="button" name="GoalScored" onclick="attributeCounter(17)">Goal Scored</button>
+</div>
+
+<div>
+  <h3>Table</h3>
+  <table>
+    <tr>
+    <thead>
+      <th>Player Name</th>
+      <th>Tackle Lost</th>
+      <th>Tackle Won</th>
+      <th>Interception</th>
+      <th>Blocks</th>
+      <th>Aerial Duel Won</th>
+      <th>Aerial Duel Lost</th>
+      <th>Save</th>
+      <th>Punch</th>
+      <th>Pass</th>
+      <th>Pass Failed</th>
+      <th>Through Ball</th>
+      <th>Progressive Pass</th>
+      <th>Key Pass</th>
+      <th>Assist</th>
+      <th>Shot On Target</th>
+      <th>Shot Off Target</th>
+      <th>Goal Conceded</th>
+      <th>Goal Scored</th>
+    </thead>
+    </tr>
+<tbody>
+    <tr>
+      <td>Kane</td>
+      <td id="P1TackleLost">0</td>
+      <td id="P1TackleWon">0</td>
+      <td id="P1Interception">0</td>
+      <td id="P1Blocks">0</td>
+      <td id="P1AerialDuelWon">0</td>
+      <td id="P1AerialDuelLost">0</td>
+      <td id="P1Save">0</td>
+      <td id="P1Punch">0</td>
+      <td id="P1Pass">0</td>
+      <td id="P1PassFailed">0</td>
+      <td id="P1ThroughBall">0</td>
+      <td id="P1ProgressivePass">0</td>
+      <td id="P1KeyPass">0</td>
+      <td id="P1Assist">0</td>
+      <td id="P1ShotOnTarget">0</td>
+      <td id="P1ShotOffTarget">0</td>
+      <td id="P1GoalConceded">0</td>
+      <td id="P1GoalScored">0</td>
+    </tr>
+    <tr>
+      <td>Son</td>
+      <td id="P2TackleLost">0</td>
+      <td id="P2TackleWon">0</td>
+      <td id="P2Interception">0</td>
+      <td id="P2Blocks">0</td>
+      <td id="P2AerialDuelWon">0</td>
+      <td id="P2AerialDuelLost">0</td>
+      <td id="P2Save">0</td>
+      <td id="P2Punch">0</td>
+      <td id="P2Pass">0</td>
+      <td id="P2PassFailed">0</td>
+      <td id="P2ThroughBall">0</td>
+      <td id="P2ProgressivePass">0</td>
+      <td id="P2KeyPass">0</td>
+      <td id="P2Assist">0</td>
+      <td id="P2ShotOnTarget">0</td>
+      <td id="P2ShotOffTarget">0</td>
+      <td id="P2GoalConceded">0</td>
+      <td id="P2GoalScored">0</td>
+    </tr>
+    <tr>
+      <td>Bale</td>
+      <td id="P3TackleLost">0</td>
+      <td id="P3TackleWon">0</td>
+      <td id="P3Interception">0</td>
+      <td id="P3Blocks">0</td>
+      <td id="P3AerialDuelWon">0</td>
+      <td id="P3AerialDuelLost">0</td>
+      <td id="P3Save">0</td>
+      <td id="P3Punch">0</td>
+      <td id="P3Pass">0</td>
+      <td id="P3PassFailed">0</td>
+      <td id="P3ThroughBall">0</td>
+      <td id="P3ProgressivePass">0</td>
+      <td id="P3KeyPass">0</td>
+      <td id="P3Assist">0</td>
+      <td id="P3ShotOnTarget">0</td>
+      <td id="P3ShotOffTarget">0</td>
+      <td id="P3GoalConceded">0</td>
+      <td id="P3GoalScored">0</td>
+    </tr>
+    <tr>
+      <td>Winks</td>
+      <td id="P4TackleLost">0</td>
+      <td id="P4TackleWon">0</td>
+      <td id="P4Interception">0</td>
+      <td id="P4Blocks">0</td>
+      <td id="P4AerialDuelWon">0</td>
+      <td id="P4AerialDuelLost">0</td>
+      <td id="P4Save">0</td>
+      <td id="P4Punch">0</td>
+      <td id="P4Pass">0</td>
+      <td id="P4PassFailed">0</td>
+      <td id="P4ThroughBall">0</td>
+      <td id="P4ProgressivePass">0</td>
+      <td id="P4KeyPass">0</td>
+      <td id="P4Assist">0</td>
+      <td id="P4ShotOnTarget">0</td>
+      <td id="P4ShotOffTarget">0</td>
+      <td id="P4GoalConceded">0</td>
+      <td id="P4GoalScored">0</td>
+    </tr>
+    <tr>
+      <td>Ndombele</td>
+      <td id="P5TackleLost">0</td>
+      <td id="P5TackleWon">0</td>
+      <td id="P5Interception">0</td>
+      <td id="P5Blocks">0</td>
+      <td id="P5AerialDuelWon">0</td>
+      <td id="P5AerialDuelLost">0</td>
+      <td id="P5Save">0</td>
+      <td id="P5Punch">0</td>
+      <td id="P5Pass">0</td>
+      <td id="P5PassFailed">0</td>
+      <td id="P5ThroughBall">0</td>
+      <td id="P5ProgressivePass">0</td>
+      <td id="P5KeyPass">0</td>
+      <td id="P5Assist">0</td>
+      <td id="P5ShotOnTarget">0</td>
+      <td id="P5ShotOffTarget">0</td>
+      <td id="P5GoalConceded">0</td>
+      <td id="P5GoalScored">0</td>
+    </tr>
+    <tr>
+      <td>Hojberg</td>
+      <td id="P6TackleLost">0</td>
+      <td id="P6TackleWon">0</td>
+      <td id="P6Interception">0</td>
+      <td id="P6Blocks">0</td>
+      <td id="P6AerialDuelWon">0</td>
+      <td id="P6AerialDuelLost">0</td>
+      <td id="P6Save">0</td>
+      <td id="P6Punch">0</td>
+      <td id="P6Pass">0</td>
+      <td id="P6PassFailed">0</td>
+      <td id="P6ThroughBall">0</td>
+      <td id="P6ProgressivePass">0</td>
+      <td id="P6KeyPass">0</td>
+      <td id="P6Assist">0</td>
+      <td id="P6ShotOnTarget">0</td>
+      <td id="P6ShotOffTarget">0</td>
+      <td id="P6GoalConceded">0</td>
+      <td id="P6GoalScored">0</td>
+    </tr>
+    <tr>
+      <td>Reguilon</td>
+      <td id="P7TackleLost">0</td>
+      <td id="P7TackleWon">0</td>
+      <td id="P7Interception">0</td>
+      <td id="P7Blocks">0</td>
+      <td id="P7AerialDuelWon">0</td>
+      <td id="P7AerialDuelLost">0</td>
+      <td id="P7Save">0</td>
+      <td id="P7Punch">0</td>
+      <td id="P7Pass">0</td>
+      <td id="P7PassFailed">0</td>
+      <td id="P7ThroughBall">0</td>
+      <td id="P7ProgressivePass">0</td>
+      <td id="P7KeyPass">0</td>
+      <td id="P7Assist">0</td>
+      <td id="P7ShotOnTarget">0</td>
+      <td id="P7ShotOffTarget">0</td>
+      <td id="P7GoalConceded">0</td>
+      <td id="P7GoalScored">0</td>
+    </tr>
+    <tr>
+      <td>Doherty</td>
+      <td id="P8TackleLost">0</td>
+      <td id="P8TackleWon">0</td>
+      <td id="P8Interception">0</td>
+      <td id="P8Blocks">0</td>
+      <td id="P8AerialDuelWon">0</td>
+      <td id="P8AerialDuelLost">0</td>
+      <td id="P8Save">0</td>
+      <td id="P8Punch">0</td>
+      <td id="P8Pass">0</td>
+      <td id="P8PassFailed">0</td>
+      <td id="P8ThroughBall">0</td>
+      <td id="P8ProgressivePass">0</td>
+      <td id="P8KeyPass">0</td>
+      <td id="P8Assist">0</td>
+      <td id="P8ShotOnTarget">0</td>
+      <td id="P8ShotOffTarget">0</td>
+      <td id="P8GoalConceded">0</td>
+      <td id="P8GoalScored">0</td>
+    </tr>
+    <tr>
+      <td>Dier</td>
+      <td id="P9TackleLost">0</td>
+      <td id="P9TackleWon">0</td>
+      <td id="P9Interception">0</td>
+      <td id="P9Blocks">0</td>
+      <td id="P9AerialDuelWon">0</td>
+      <td id="P9AerialDuelLost">0</td>
+      <td id="P9Save">0</td>
+      <td id="P9Punch">0</td>
+      <td id="P9Pass">0</td>
+      <td id="P9PassFailed">0</td>
+      <td id="P9ThroughBall">0</td>
+      <td id="P9ProgressivePass">0</td>
+      <td id="P9KeyPass">0</td>
+      <td id="P9Assist">0</td>
+      <td id="P9ShotOnTarget">0</td>
+      <td id="P9ShotOffTarget">0</td>
+      <td id="P9GoalConceded">0</td>
+      <td id="P9GoalScored">0</td>
+    </tr>
+    <tr>
+      <td>Alderwiereld</td>
+      <td id="P10TackleLost">0</td>
+      <td id="P10TackleWon">0</td>
+      <td id="P10Interception">0</td>
+      <td id="P10Blocks">0</td>
+      <td id="P10AerialDuelWon">0</td>
+      <td id="P10AerialDuelLost">0</td>
+      <td id="P10Save">0</td>
+      <td id="P10Punch">0</td>
+      <td id="P10Pass">0</td>
+      <td id="P10PassFailed">0</td>
+      <td id="P10ThroughBall">0</td>
+      <td id="P10ProgressivePass">0</td>
+      <td id="P10KeyPass">0</td>
+      <td id="P10Assist">0</td>
+      <td id="P10ShotOnTarget">0</td>
+      <td id="P10ShotOffTarget">0</td>
+      <td id="P10GoalConceded">0</td>
+      <td id="P10GoalScored">0</td>
+    </tr>
+    <tr>
+      <td>Lloris</td>
+      <td id="P11TackleLost">0</td>
+      <td id="P11TackleWon">0</td>
+      <td id="P11Interception">0</td>
+      <td id="P11Blocks">0</td>
+      <td id="P11AerialDuelWon">0</td>
+      <td id="P11AerialDuelLost">0</td>
+      <td id="P11Save">0</td>
+      <td id="P11Punch">0</td>
+      <td id="P11Pass">0</td>
+      <td id="P11PassFailed">0</td>
+      <td id="P11ThroughBall">0</td>
+      <td id="P11ProgressivePass">0</td>
+      <td id="P11KeyPass">0</td>
+      <td id="P11Assist">0</td>
+      <td id="P11ShotOnTarget">0</td>
+      <td id="P11ShotOffTarget">0</td>
+      <td id="P11GoalConceded">0</td>
+      <td id="P11GoalScored">0</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+
+  </body>
+</html>
